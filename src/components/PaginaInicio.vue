@@ -31,6 +31,7 @@ onUnmounted(() => {
 </script>
 
 <template>
+  <h1 class="bienvenido">Bienvenidos!</h1>
   <div class="carrusel">
     <img :src="carruselData[indiceActual].src" alt="producto" />
     <div class="texto-carrusel">
@@ -40,6 +41,12 @@ onUnmounted(() => {
 </template>
 
 <style scoped>
+.bienvenido {
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .carrusel {
   display: flex;
   flex-direction: row;

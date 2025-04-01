@@ -13,23 +13,6 @@
         </ul>
       </div>
     </div>
-    <div class="footer-2">
-      <h1>Suscribete</h1>
-      <form>
-        <div>
-          <label for="tex">Escribe Nombre</label>
-          <input type="text" placeholder="Escribe tu nombre" />
-        </div>
-        <div>
-          <label for="tex">Escribe Email</label>
-          <input type="email" placeholder="Escribe tu Email" />
-        </div>
-        <div>
-          <label for="tex">Dejanos tus consulta</label>
-          <textarea></textarea>
-        </div>
-      </form>
-    </div>
     <div class="footer-3">
       <h1>Redes Sociales</h1>
       <div>
@@ -78,34 +61,9 @@
 }
 
 .footer-1,
-.footer-2,
 .footer-3 {
   flex: 1 1 300px;
   max-width: 400px;
-}
-
-.footer-2 form div {
-  margin-bottom: 1rem;
-}
-
-.footer-2 label {
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 0.3rem;
-}
-
-.footer-2 input,
-.footer-2 textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: none;
-  font-size: 0.9rem;
-}
-
-.footer-2 textarea {
-  resize: vertical;
-  min-height: 80px;
 }
 
 form div label {
@@ -131,20 +89,12 @@ form div label {
   }
 
   .footer-1,
-  .footer-2,
   .footer-3 {
     flex: 1 1 100%;
     max-width: 600px;
     text-align: center;
   }
 
-  .footer-2 input,
-  .footer-2 textarea {
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  .footer-2 h1,
   .footer-1 h1,
   .footer-3 h1 {
     font-size: 24px;
@@ -170,24 +120,11 @@ form div label {
     text-align: center;
   }
 
-  .footer-2 form div {
-    width: 100%;
-  }
-
-  .footer-2 input,
-  .footer-2 textarea {
-    width: 90%;
-    text-align: center;
-    letter-spacing: 2px;
-  }
-
-  .footer-2,
   .footer-1,
   .footer-3 {
     width: 100%;
   }
 
-  .footer-2 h1,
   .footer-1 h1,
   .footer-3 h1 {
     font-size: 20px;

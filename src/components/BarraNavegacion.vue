@@ -89,6 +89,10 @@ nav ul li a:hover {
     padding: 1rem 0;
   }
 
+  nav {
+    padding: 0;
+  }
+
   nav ul li {
     width: 100%;
     text-align: center;
