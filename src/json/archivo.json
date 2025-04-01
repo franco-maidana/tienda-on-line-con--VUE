@@ -1,21 +1,21 @@
 [
   {
     "name": "Aceite Cañuelas",
-    "img": "/aceite-cañuelas.jpeg",
+    "img": "/aceite-canuelas.jpeg",
     "categorias": "Aceites",
     "precio": 1200,
     "stock": 10
   },
   {
     "name": "Harina Blancaflor",
-    "img": "/harina-blanca-flor.jpeg",
+    "img": "/harina-blancaflor.jpeg",
     "categorias": "Harinas",
     "precio": 1500,
     "stock": 10
   },
   {
     "name": "Harina Cañuelas",
-    "img": "/harina-cañuelas.jpeg",
+    "img": "/harina-canuelas.jpeg",
     "categorias": "Harinas",
     "precio": 800,
     "stock": 10
@@ -28,7 +28,7 @@
     "stock": 10
   },
   {
-    "name": "Leche en polvo",
+    "name": "Leche en Polvo",
     "img": "/leche-en-polvo-sancor.jpeg",
     "categorias": "Lacteos",
     "precio": 700,
@@ -49,7 +49,7 @@
     "stock": 10
   },
   {
-    "name": "Leche la serenisima",
+    "name": "Leche La Serenísima",
     "img": "/leche-entera-la-serenisima.jpeg",
     "categorias": "Lacteos",
     "precio": 700,
