@@ -1,25 +1,25 @@
 <script setup>
-// import Productos from '/src/json/archivo.json'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useFetch } from '../composables/useFetch'
 import draggable from 'vuedraggable'
 import SharedSearch from './SharedSearch.vue'
 
-const apiInterna = '/json/archivo.json' // api interno del archivo json
-const searchInput = ref('') // constante para trear los datos del buscador
+// ✅ Detectar si es dispositivo móvil para desactivar el drag
+const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)
+
+const apiInterna = '/json/archivo.json'
+const searchInput = ref('')
 const productoView = ref([])
 const productosFiltrados = ref([])
 
+// ✅ Traer productos del JSON y mantener el orden guardado (si existe)
 useFetch(apiInterna, (json) => {
   productoView.value = json
-  // productosFiltrados.value = json // mostrar todo al inicio
   const guardado = localStorage.getItem('ordenProductos')
 
   if (guardado) {
     try {
       const datos = JSON.parse(guardado)
-
-      // Validamos que los IDs coincidan con los actuales
       const idsOriginales = new Set(json.map((p) => p.id))
       productosFiltrados.value = datos.filter((p) => idsOriginales.has(p.id))
     } catch {
@@ -30,18 +30,17 @@ useFetch(apiInterna, (json) => {
   }
 })
 
-// Lógica al hacer clic en el botón
+// ✅ Filtrado por nombre o categoría desde el buscador
 const filtrarProductos = (valorBuscado) => {
   const search = valorBuscado.toLowerCase()
   productosFiltrados.value = productoView.value.filter((prod) => {
-    const nombre = prod.name.toLowerCase() // buscar productos por el nombre
-    const categoria = prod.categorias.toLowerCase() // buscar produtos por categorias
+    const nombre = prod.name.toLowerCase()
+    const categoria = prod.categorias.toLowerCase()
     return nombre.includes(search) || categoria.includes(search)
   })
 }
 
-import { watch } from 'vue'
-
+// ✅ Guardar orden personalizado en localStorage al reordenar
 watch(
   productosFiltrados,
   (nuevoOrden) => {
@@ -50,10 +49,9 @@ watch(
   { deep: true },
 )
 
+// ✅ Agregar producto al carrito si no existe
 const agregarAlCarrito = (producto) => {
   const carrito = JSON.parse(localStorage.getItem('carrito')) || []
-
-  // Verificar si ya está en el carrito
   const existe = carrito.find((p) => p.name === producto.name)
 
   if (!existe) {
@@ -64,15 +62,18 @@ const agregarAlCarrito = (producto) => {
     alert(`"${producto.name}" ya está en el carrito ❗`)
   }
 }
-
-console.log(productosFiltrados)
 </script>
 
 <template>
   <SharedSearch v-model="searchInput" @search="filtrarProductos" />
-  <!-- @search => nombre del emit del hijo lo agarramos y obtenemos la informacion que queremos-->
-  <!-- v-model => pasamos la logica del boton al hijo para que busque-->
-  <draggable v-model="productosFiltrados" item-key="id" class="padre">
+
+  <!-- ✅ Mostrar mensaje solo en escritorio -->
+  <p v-if="!isMobile" style="text-align: center; font-size: 0.9rem; color: gray">
+    💡 Podés arrastrar los productos para reordenarlos
+  </p>
+
+  <!-- ✅ Drag desactivado en móvil -->
+  <draggable v-model="productosFiltrados" item-key="id" class="padre" :disabled="isMobile">
     <template #item="{ element }">
       <div class="card">
         <img :src="element.img" alt="imagen" />
