@@ -64,6 +64,8 @@ const agregarAlCarrito = (producto) => {
     alert(`"${producto.name}" ya está en el carrito ❗`)
   }
 }
+
+console.log(productosFiltrados)
 </script>
 
 <template>

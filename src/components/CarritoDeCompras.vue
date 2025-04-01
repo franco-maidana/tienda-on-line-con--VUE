@@ -44,6 +44,8 @@ const cambiarCantidad = (index, delta) => {
     actualizarLocalStorage()
   }
 }
+
+console.log(carrito)
 </script>
 
 <template>

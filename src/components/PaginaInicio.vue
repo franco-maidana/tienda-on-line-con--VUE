@@ -3,15 +3,15 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const carruselData = [
   {
-    src: './../../public/aceiteCañuelas.jpeg',
+    src: './../../public/aceite-canuelas.jpeg',
     texto: 'Aceite Cañuelas: calidad en tu cocina',
   },
   {
-    src: './../../public/lecheEnPolvoSancor.jpeg',
+    src: './../../public/leche-en-polvo-sancor.jpeg',
     texto: 'Leche en Polvo Sancor: energía para tu día',
   },
   {
-    src: './../../public/harinaPureza.jpeg',
+    src: './../../public/harina-pureza.jpeg',
     texto: 'Harina Pureza: la base de toda receta',
   },
 ]
