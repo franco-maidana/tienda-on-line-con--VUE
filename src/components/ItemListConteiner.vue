@@ -5,7 +5,7 @@ import { useFetch } from '../composables/useFetch'
 import draggable from 'vuedraggable'
 import SharedSearch from './SharedSearch.vue'
 
-const apiInterna = '/src/json/archivo.json' // api interno del archivo json
+const apiInterna = '/json/archivo.json' // api interno del archivo json
 const searchInput = ref('') // constante para trear los datos del buscador
 const productoView = ref([])
 const productosFiltrados = ref([])
