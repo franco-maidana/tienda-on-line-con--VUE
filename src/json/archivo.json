@@ -1,56 +1,56 @@
 [
   {
     "name": "Aceite Cañuelas",
-    "img": "/aceiteCañuelas.jpeg",
+    "img": "/aceite-cañuelas.jpeg",
     "categorias": "Aceites",
     "precio": 1200,
     "stock": 10
   },
   {
     "name": "Harina Blancaflor",
-    "img": "/harinaBlancaFlor.jpeg",
+    "img": "/harina-blanca-flor.jpeg",
     "categorias": "Harinas",
     "precio": 1500,
     "stock": 10
   },
   {
     "name": "Harina Cañuelas",
-    "img": "/harinaCañuelas.jpeg",
+    "img": "/harina-cañuelas.jpeg",
     "categorias": "Harinas",
     "precio": 800,
     "stock": 10
   },
   {
     "name": "Harina Morixe",
-    "img": "/harinaMorixe.jpeg",
+    "img": "/harina-morixe.jpeg",
     "categorias": "Harinas",
     "precio": 700,
     "stock": 10
   },
   {
     "name": "Leche en polvo",
-    "img": "/lecheEnPolvoSancor.jpeg",
+    "img": "/leche-en-polvo-sancor.jpeg",
     "categorias": "Lacteos",
     "precio": 700,
     "stock": 10
   },
   {
     "name": "Harina Pureza",
-    "img": "/harinaPureza.jpeg",
+    "img": "/harina-pureza.jpeg",
     "categorias": "Harinas",
     "precio": 999,
     "stock": 10
   },
   {
     "name": "Aceite Belmont",
-    "img": "/aceiteBelmont.jpeg",
+    "img": "/aceite-belmont.jpeg",
     "categorias": "Aceites",
     "precio": 1300,
     "stock": 10
   },
   {
     "name": "Leche la serenisima",
-    "img": "/lecheEnteraLaSerenisima.jpeg",
+    "img": "/leche-entera-la-serenisima.jpeg",
     "categorias": "Lacteos",
     "precio": 700,
     "stock": 10
